@@ -1,0 +1,33 @@
+{
+  "name": "nessus-api",
+  "version": "0.1.0",
+  "description": "Nessus API interface for node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexCline/nessus-api.git"
+  },
+  "keywords": [
+    "nessus",
+    "api"
+  ],
+  "author": {
+    "name": "Alex Cline",
+    "email": "alex.cline@gmail.com",
+    "website": "http://alexcline.net"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexCline/nessus-api/issues"
+  },
+  "homepage": "https://github.com/AlexCline/nessus-api",
+  "dependencies": {
+    "request": "~2.34.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2"
+  }
+}
