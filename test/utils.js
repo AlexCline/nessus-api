@@ -8,21 +8,5 @@ describe("Utils", function(){
     });
   });
 
-  describe("#sortByTimestamp", function(){
-    it('should sort an array of objects with timestamps', function(){
-      var array = [
-        { timestamp: 234 },
-        { timestamp: 345 },
-        { timestamp: 123 }
-      ];
-
-      assert.deepEqual(array.sort(utils.sortByTimestamp),
-        [
-          { timestamp: 123 },
-          { timestamp: 234 },
-          { timestamp: 345 }
-        ]);
-    });
-  });
 });
 

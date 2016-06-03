@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/AlexCline/nessus-api",
   "dependencies": {
-    "request": "~2.34.0",
-    "xml2js": "*"
+    "request": "^2.34.0"
   },
   "devDependencies": {
-    "mocha": "~1.18.2"
+    "mocha": "~1.18.2",
+    "request-debug": "^0.2.0"
   }
 }

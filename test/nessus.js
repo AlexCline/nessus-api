@@ -10,9 +10,9 @@ describe("Nessus", function(){
 
   describe("#config", function(){
     var options = {
-      host: "https://localhost:8834",
-      username: 'admin',
-      password: 'admin'
+      url: "https://localhost:8834",
+      access_key: 'admin',
+      secret_key: 'admin'
     },
     nessus = new Nessus();
 
@@ -32,7 +32,7 @@ describe("Nessus", function(){
 
     it("should throw an error if a required attr is missing", function(){
       var nessus = new Nessus();
-      delete options.username;
+      delete options.secret_key;
       assert.throws( function(){
         nessus.config(options);
       }, Error);

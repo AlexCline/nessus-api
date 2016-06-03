@@ -7,7 +7,7 @@ describe("HTTP", function(){
     it("should load the required methods", function(){
       assert.deepEqual(
         Object.keys(http.methods(testOptions)).sort(),
-        ['get', 'put', 'post', 'del'].sort()
+        ['configure', 'get', 'put', 'post', 'del', 'doRequest'].sort()
       );
     });
   });

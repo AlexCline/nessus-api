@@ -8,41 +8,39 @@ describe("Server", function(){
   before(function(done){
     nessus = new Nessus();
     nessus.config(testOptions);
-    nessus.login(done);
+    // nessus.login(done);
+    done();
   });
 
-  describe("#feed", function(){
-    it("should return a valid feed object", function(done){
-      nessus.feed(function(err, feed){
+  describe("#status", function(){
+    it("should return the server status", function(done){
+      nessus.server.status(function(err, status){
         assert.ifError(err);
-        assert(feed);
+        assert(status);
+        done();
+      });
+    });
+    it("should indicate the server is ready", function(done){
+      nessus.server.status(function(err, status){
+        assert.ifError(err);
+        assert(status.status == "ready");
         done();
       });
     });
   });
 
-  describe("#load", function(){
-    it("should return a valid load object", function(done){
-      nessus.load(function(err, load){
+  describe("#properties", function(){
+    it("should return a properties object", function(done){
+      nessus.server.properties(function(err, properties){
         assert.ifError(err);
-        assert(load);
+        assert(properties);
         done();
       });
     });
   });
 
-  describe("#uuid", function(){
-    it("should return a valid uuid object", function(done){
-      nessus.uuid(function(err, uuid){
-        assert.ifError(err);
-        assert(uuid);
-        done();
-      });
-    });
-  });
-
-  after(function(done){
-    nessus.logout(done);
-  });
+  // after(function(done){
+  //   nessus.logout(done);
+  // });
 
 });

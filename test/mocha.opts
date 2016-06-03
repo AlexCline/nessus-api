@@ -1,3 +1,4 @@
---reporter dot
+--reporter list
 --ui bdd
 --timeout 20000
+--slow 500

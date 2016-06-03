@@ -4,26 +4,25 @@ var assert = require("assert"),
 
 var nessus = null;
 
-describe("Auth", function(){
+describe("Session", function(){
   before(function(done){
     nessus = new Nessus();
     nessus.config(testOptions);
     done();
   });
 
-  describe("#login", function(){
-    it("should return a valid token upon login", function(done){
-      nessus.login(function(err, token){
-        assert.ifError(err);
-        assert(token);
+  describe("#get", function(){
+    it("should return the currently logged in user", function(done){
+      nessus.get(function(err, user){
+        assert(user);
         done();
       });
     });
   });
 
   describe("#logout", function(){
-    it("should have a token in the current session", function(){
-      assert(nessus.config().token);
+    it("should have an access_key in the current session", function(){
+      assert(nessus.config().access_key);
     });
 
     it("should logout the current session", function(done){
